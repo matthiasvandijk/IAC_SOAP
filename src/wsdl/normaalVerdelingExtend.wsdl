@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:tns="http://api.hu.fnt.nl/normverd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://api.hu.fnt.nl/normverd">
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://api.hu.fnt.nl/normverd" schemaLocation="normaalVerdeling.xsd"/>
+		</xsd:schema>
+	</types>
+	<message name="calculateNormVerd">
+		<part name="parameters" element="tns:calculateNormVerd"/>
+	</message>
+	<message name="calculateNormVerdResponse">
+		<part name="parameters" element="tns:calculateNormVerdResponse"/>
+	</message>
+	<portType name="NormVerdServiceIF">
+		<operation name="calculateNormVerd">
+			<input xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata" ns1:Action="http://api.hu.fnt.nl/normverd/NormVerdServiceIF/calculateNormVerdRequest" message="tns:calculateNormVerd"/>
+			<output xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata" ns2:Action="http://api.hu.fnt.nl/normverd/NormVerdServiceIF/calculateNormVerdResponse" message="tns:calculateNormVerdResponse"/>
+		</operation>
+	</portType>
+</definitions>

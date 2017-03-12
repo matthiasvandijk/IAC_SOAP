@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:tns="http://api.hu.fnt.nl/normverd" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://api.hu.fnt.nl/normverd">
+
+	<xs:element name="calculateNormVerd" type="tns:calculateNormVerd"/>
+
+	<xs:element name="calculateNormVerdResponse" type="tns:calculateNormVerdResponse"/>
+
+	<xs:complexType name="calculateNormVerd">
+		<xs:annotation>
+			<xs:documentation>De data van de te gebruiken data set wordt hiermee doorgegeven. Er moeten minimaal twee elementen worden aangeleverd, anders kan er geen standaarddeviatie worden berekent.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="data" type="xs:double" minOccurs="2" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="calculateNormVerdResponse">
+		<xs:annotation>
+			<xs:documentation>Complextype die een element 'return' aanmaakt met het type 'normVerdResponse'. Zo kan in de toekomst makkelijk meerdere return elementen worden teruggegeven.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="return" type="tns:normVerdResponse" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="normVerdResponse">
+		<xs:annotation>
+			<xs:documentation>Dit type bevat vier elementen, element 'result' geeft een boolean waarde terug, indien de dataset normaal is verdeeld zal dit op true staan.</xs:documentation>
+			<xs:documentation>Element 'kurtosis' is de maat voor piekvormigheid van een set met data.</xs:documentation>
+			<xs:documentation>Element 'skewness' is de maat voor scheefheid.</xs:documentation>
+			<xs:documentation>Elementen 'kurtosis' en 'skewness' kunnen op NaN gezet worden als er niet genoeg data wordt aangeleverd.</xs:documentation>
+			<xs:documentation>Element 'smirnov_p_value' is de p_waarde berekent door de Kolmogorov-Smirnovtoets.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="result" type="xs:boolean"/>
+			<xs:element name="kurtosis" type="xs:double"/>
+			<xs:element name="skewness" type="xs:double"/>
+			<xs:element name="smirnov_p_value" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

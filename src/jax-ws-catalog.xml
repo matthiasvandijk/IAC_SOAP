@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Matthias/Downloads/PowerService.wsdl" uri="wsdl/PowerService.wsdl"/>
+    <system systemId="file:/C:/Users/Matthias/Downloads/PowerRequest.xsd" uri="wsdl/PowerRequest.xsd"/>
+    <system systemId="file:/C:/Users/Matthias/Downloads/PowerResponse.xsd" uri="wsdl/PowerResponse.xsd"/>
+    <system systemId="file:/C:/Users/Matthias/Drive/HU/IDE/Java/Jaar_2/Blok_3/IAC/IAC_SOAP/src/wsdl/NormVerd/NormVerdService.wsdl" uri="wsdl/NormVerdService.wsdl"/>
+    <system systemId="file:/C:/Users/Matthias/Drive/HU/IDE/Java/Jaar_2/Blok_3/IAC/IAC_SOAP/src/wsdl/NormVerd/NormVerdRequest.xsd" uri="wsdl/NormVerdRequest.xsd"/>
+    <system systemId="file:/C:/Users/Matthias/Drive/HU/IDE/Java/Jaar_2/Blok_3/IAC/IAC_SOAP/src/wsdl/NormVerd/NormVerdResponse.xsd" uri="wsdl/NormVerdResponse.xsd"/>
+</catalog>
